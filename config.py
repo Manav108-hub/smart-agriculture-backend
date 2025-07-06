@@ -1,6 +1,6 @@
 MODEL_PATHS = {
-    "crop": "saved_models/crop_model.pth",
-    "yield": "saved_models/yield_model.pth",
+    "crop": "saved_models/Crop Yield_best.pth",
+    "yield": "saved_models/Market Price_best.pth",
     "sustainability": "saved_models/sustainability_model.pth"
 }
 
