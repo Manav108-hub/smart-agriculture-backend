@@ -1,7 +1,7 @@
 MODEL_PATHS = {
     "crop": "saved_models/Crop Yield_best.pth",
     "yield": "saved_models/Market Price_best.pth",
-    "sustainability": "saved_models/sustainability_model.pth"
+    "sustainability": "saved_models/Sustainability_best.pth"
 }
 
 # Input features from your training code
