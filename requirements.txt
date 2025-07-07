@@ -4,3 +4,4 @@ torch
 pydantic
 numpy
 scikit-learn
+uvicorn

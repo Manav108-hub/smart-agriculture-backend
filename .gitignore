@@ -1,0 +1,105 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+.env/
+.env.bak/
+env.bak/
+
+# PyInstaller
+# Usually contains _pycache_/, *.manifest, *.spec
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# Pylint
+pylint-report.txt
+pylint-global.rc
+
+# Bandit
+bandit.json
+
+# Pytype
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# Data files
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.db
+*.sqlite3
+*.log
+
+# Secrets and environment files
+.env
+*.env
+
+# System files
+.DS_Store
+Thumbs.db

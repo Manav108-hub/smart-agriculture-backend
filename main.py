@@ -1,14 +1,35 @@
 from fastapi import FastAPI
-import routes
+from contextlib import asynccontextmanager
+import logging
+import models
+from routes import router
 
-app = FastAPI(title="Agricultural AI API")
-app.include_router(routes.router, prefix="/api")
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-@app.on_event("startup")
-async def load_models_on_startup():
-    """Pre-load models when server starts"""
-    print("Loading models...")
-    models.ModelLoader.load_model("crop")
-    models.ModelLoader.load_model("yield")
-    models.ModelLoader.load_model("sustainability")
-    print("Models loaded successfully")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup
+    logger.info("Starting up - API ready!")
+    yield
+    # Shutdown
+    logger.info("Shutting down...")
+
+app = FastAPI(
+    title="Smart Agriculture API",
+    description="Machine Learning API for agricultural predictions",
+    version="1.0.0",
+    lifespan=lifespan
+)
+
+# Include routes
+app.include_router(router, prefix="/api")
+
+@app.get("/")
+async def root():
+    return {"message": "Smart Agriculture API is running"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
